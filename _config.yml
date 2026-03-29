@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 待到秋来九月八
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: yhnz
 language: en
 timezone: ''
 
@@ -96,9 +96,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: anzhiyu
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/yhnz1234/yhnz1234.github.io.git
+  branch: main
