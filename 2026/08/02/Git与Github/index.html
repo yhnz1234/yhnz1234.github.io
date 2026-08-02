@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Git与Github | Done is better than perfect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="学完整理，给同样是新手的人看。看完这个，基本的 Git 概念就不慌了，具体命令直接交给 AI 敲就行。  写在前面：为什么要学 Git现在 AI 编程工具一堆，核心操作全围着 Git 转。好消息是 AI 时代根本不用死记硬背命令，把概念搞懂，剩下的事情用大白话指挥 AI 就行。 1. Git 到底是个啥一句话：版本控制。就是给你文件夹装个”后悔药”。 写论文的时候谁没干过这种事——“论文第一版”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git与Github">
+<meta property="og:url" content="http://example.com/2026/08/02/Git%E4%B8%8EGithub/index.html">
+<meta property="og:site_name" content="Done is better than perfect">
+<meta property="og:description" content="学完整理，给同样是新手的人看。看完这个，基本的 Git 概念就不慌了，具体命令直接交给 AI 敲就行。  写在前面：为什么要学 Git现在 AI 编程工具一堆，核心操作全围着 Git 转。好消息是 AI 时代根本不用死记硬背命令，把概念搞懂，剩下的事情用大白话指挥 AI 就行。 1. Git 到底是个啥一句话：版本控制。就是给你文件夹装个”后悔药”。 写论文的时候谁没干过这种事——“论文第一版”">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-08-02T13:02:11.000Z">
+<meta property="article:modified_time" content="2026-08-02T13:02:40.212Z">
+<meta property="article:author" content="yhnz1234">
+<meta property="article:tag" content="极客">
+<meta property="article:tag" content="知识">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Done is better than perfect" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Done is better than perfect</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Git与Github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/08/02/Git%E4%B8%8EGithub/" class="article-date">
+  <time class="dt-published" datetime="2026-08-02T13:02:11.000Z" itemprop="datePublished">2026-08-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Git与Github
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>学完整理，给同样是新手的人看。看完这个，基本的 Git 概念就不慌了，具体命令直接交给 AI 敲就行。</p>
+</blockquote>
+<h2 id="写在前面：为什么要学-Git"><a href="#写在前面：为什么要学-Git" class="headerlink" title="写在前面：为什么要学 Git"></a>写在前面：为什么要学 Git</h2><p>现在 AI 编程工具一堆，核心操作全围着 Git 转。好消息是 AI 时代根本不用死记硬背命令，把概念搞懂，剩下的事情用大白话指挥 AI 就行。</p>
+<h2 id="1-Git-到底是个啥"><a href="#1-Git-到底是个啥" class="headerlink" title="1. Git 到底是个啥"></a>1. Git 到底是个啥</h2><p>一句话：<strong>版本控制</strong>。就是给你文件夹装个”后悔药”。</p>
+<p>写论文的时候谁没干过这种事——“论文第一版””第二版””第三版””定稿版””最终版打死不改”，每次小心翼翼地保存，就怕哪天要找回某个历史段落。Git 就是把这套纯人工操作自动化了。</p>
+<ul>
+<li>被 Git 管的文件夹叫<strong>仓库</strong>，里面会多出个 <code>.git</code> 子文件夹，所有版本信息都藏在这。</li>
+<li>基本单位是 <strong>commit（提交）</strong>，每提交一次就是存一份快照，提交越攒越多，串成一条历史链路，随时能翻旧账。</li>
+</ul>
+<blockquote>
+<p>想说：把 <code>.git</code> 文件夹删了，这个文件夹就”退管”了，不再是 Git 仓库。</p>
+</blockquote>
+<h2 id="2-GitHub-是干嘛的"><a href="#2-GitHub-是干嘛的" class="headerlink" title="2. GitHub 是干嘛的"></a>2. GitHub 是干嘛的</h2><p>Git 管本地，GitHub 管云端，名字拆开就是 “Git” + “Hub”（集散地）。全世界的开发者把仓库往上一放，就变成代码托管 + 协作平台。</p>
+<ul>
+<li>仓库分<strong>公开</strong>（所有人都能看到代码、学习）和<strong>私有</strong>（只有自己能看）。</li>
+<li>Linux、Python 官方解释器这些巨无霸都开源放在上面，开源真的是计算机世界的基石。</li>
+<li>除了 GitHub 还有 GitLab、Gitee，概念一样，会一个全都会。</li>
+</ul>
+<h2 id="3-本地四个核心概念"><a href="#3-本地四个核心概念" class="headerlink" title="3. 本地四个核心概念"></a>3. 本地四个核心概念</h2><ul>
+<li><strong>init</strong>：初始化，让文件夹变成 Git 仓库。第一步，别漏了。</li>
+<li><strong>.gitignore</strong>：声明哪些文件<strong>不让</strong> Git 管。这个超级实用——密钥 <code>.env</code>、<code>node_modules/</code> 这种上千个文件的依赖目录，都不该传上去。</li>
+<li><strong>commit</strong>：提交改动。每次提交有一个唯一 id（commit id &#x2F; 哈希），跟 AI 说话时直接报这个 id 最精确。</li>
+<li><strong>branch（分支）</strong>：仓库的平行世界。每个分支的改动互不影响，开发完 <strong>merge</strong> 合并回主干。分支本质是<strong>指针</strong>，不是拷贝代码，所以创建分支快得很。</li>
+</ul>
+<blockquote>
+<p>我一开始以为分支就是复制一份文件夹，后来才知道只是挪了个指针，轻量得很。</p>
+</blockquote>
+<h2 id="4-三种”后悔药”"><a href="#4-三种”后悔药”" class="headerlink" title="4. 三种”后悔药”"></a>4. 三种”后悔药”</h2><p>这是我最喜欢的部分，Git 的撤销分三种，场景完全不同：</p>
+<ul>
+<li><strong>discard</strong>：文件改了但<strong>还没 commit</strong>，想反悔？直接放弃这次改动。</li>
+<li><strong>reset</strong>：强制回退到某个历史状态。<strong>只在单人分支、且改动没推到远端时用</strong>。一旦推到远端再 reset，就得强制推送覆盖，容易把代码搞丢，多人分支上严禁。</li>
+<li><strong>revert</strong>：生成一个<strong>反向提交</strong>来抵消，历史干净又安全，多人协作回退优先用它。</li>
+</ul>
+<blockquote>
+<p>记住一句口诀：单人 reset、多人 revert，改一半没提交就 discard。</p>
+</blockquote>
+<h2 id="5-四个分区，理解文件怎么流动"><a href="#5-四个分区，理解文件怎么流动" class="headerlink" title="5. 四个分区，理解文件怎么流动"></a>5. 四个分区，理解文件怎么流动</h2><p>这是理解 Git 的关键，其实就是文件在这几个区域之间搬运：</p>
+<p>工作区（你磁盘上的文件夹）→ 暂存区 → 本地仓库 → 远端仓库（GitHub）</p>
+<ul>
+<li><code>add</code>：工作区改动放进<strong>暂存区</strong>（commit 前的检查点）</li>
+<li><code>commit</code>：暂存区的东西固化进<strong>本地仓库</strong></li>
+<li><code>push</code>：本地仓库推到<strong>远端</strong>（别人才能看到）</li>
+<li><code>pull</code> &#x3D; <code>fetch + merge</code>：把远端最新改动拉回本地</li>
+</ul>
+<blockquote>
+<p>VS Code 里点 commit 按钮其实是”add + commit”一步到位，把暂存区藏起来了。想分开用也可以，文件右侧的加号就是 stage。</p>
+</blockquote>
+<h2 id="6-本地-↔-远端怎么绑"><a href="#6-本地-↔-远端怎么绑" class="headerlink" title="6. 本地 ↔ 远端怎么绑"></a>6. 本地 ↔ 远端怎么绑</h2><p>就两条路：</p>
+<ul>
+<li><strong>clone</strong>：远端仓库克隆到本地，同时建好本地仓库 + 工作目录。我第一次用就是干这个，桌面多了个文件夹，很直观。</li>
+<li>先 <strong>init</strong> 再 <strong>push</strong>：本地先建仓库，提交后再推到远端。</li>
+</ul>
+<blockquote>
+<p>提醒：想 push 进别人仓库，你得是管理员或协作者才行，别瞎试。给开源项目贡献代码有专门流程，见第 8 节。</p>
+</blockquote>
+<h2 id="7-GitHub-页面常用功能"><a href="#7-GitHub-页面常用功能" class="headerlink" title="7. GitHub 页面常用功能"></a>7. GitHub 页面常用功能</h2><ul>
+<li><strong>star</strong>：相当于点赞收藏，反映项目热度。</li>
+<li><strong>fork</strong>：把项目<strong>复刻</strong>一份到自己名下，可以随便改、随便玩，是开源贡献的第一步。</li>
+<li><strong>issues</strong>：和作者&#x2F;社区讨论的地方，报 bug、提需求都在这。看开源项目前先翻翻 issues，很多坑别人都踩过、有答案了。</li>
+<li><strong>releases</strong>：正式发布的版本，一般有打包好的安装包。</li>
+<li><strong>README</strong>：仓库门面，作者都会把”这项目干嘛的、怎么用”写在这。</li>
+</ul>
+<p>好用的快捷键（记不住没事，按 <code>?</code> 能弹出速查表）：</p>
+<ul>
+<li><code>/</code> 全局搜索、<code>t</code> 搜文件、<code>l</code> 跳转行号</li>
+<li><code>.</code> 直接在浏览器里打开网页版 VS Code 看代码</li>
+</ul>
+<h2 id="8-开源协作完整流程（重点！）"><a href="#8-开源协作完整流程（重点！）" class="headerlink" title="8. 开源协作完整流程（重点！）"></a>8. 开源协作完整流程（重点！）</h2><p>想给开源项目贡献代码，走这条路：</p>
+<p>fork 母项目 → 克隆自己名下的副本 → <strong>先建分支</strong>（别直接改主干！）→ 改代码 → commit → push → 创建 <strong>Pull Request（PR）</strong> → 管理员 <strong>code review</strong> → 合并进主干</p>
+<p>三个关键点：</p>
+<ol>
+<li><strong>一定先建分支</strong>。改完同步上游代码时才不会和主干打架。</li>
+<li><strong>提 PR 前先同步母项目最新代码</strong>。两个分支改了同一行就会冲突，先在本地解决掉再提。</li>
+<li>管理员在 PR 里能看到你改的代码，可以提意见，没问题就 merge，你的名字会出现在贡献者列表里，成就感拉满。</li>
+</ol>
+<blockquote>
+<p>如果是公司内部&#x2F;被加为 collaborator，可以省略 fork，直接建分支 push 就行。</p>
+</blockquote>
+<h2 id="9-几个进阶概念"><a href="#9-几个进阶概念" class="headerlink" title="9. 几个进阶概念"></a>9. 几个进阶概念</h2><ul>
+<li><strong>HEAD</strong>：就是”当前在哪”，指着仓库现在处于哪次 commit。说人话：Git 的”你在这儿”。</li>
+<li><strong>worktree</strong>：把某个分支复制到<strong>新的文件夹</strong>，两个文件夹并行开发互不干扰，写累了还能在另一个地方开窗口。</li>
+<li><strong>merge conflict（合并冲突）</strong>：两边改了同一行，Git 也不知道留哪个，只能人工（或让 AI）决定。刚学别慌，遇到一次就会了。</li>
+<li><strong>cherry-pick</strong>：只想挑某几次提交搬走，不需要整条分支。字面意思”挑樱桃”，很形象。</li>
+<li><strong>stash</strong>：代码写一半要紧急切分支，先把半成品<strong>存起来</strong>，干完活回来再 <code>pop</code> 拿出来继续写。比临时 commit 优雅多了。</li>
+<li><strong>rebase（变基）</strong>：把自己分支的”地基”挪到 main 上，历史会变得超干净（没有一堆 merge 记录）。<strong>但根基变了必须强制推送</strong>，只能单人分支用，多人分支千万别碰。</li>
+</ul>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>别被命令吓到。核心就是理解上面这几个概念：commit 是存档、分支是平行世界、push&#x2F;pull 是搬运、revert 是安全撤销。剩下具体命令，用大白话跟 AI 说就行，它帮你敲。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/08/02/Git%E4%B8%8EGithub/" data-id="cmsbt93lh0000p4lgcm0y4sl2" data-title="Git与Github" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2/" rel="tag">极客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86/" rel="tag">知识</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/07/24/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%89%E6%A8%A1%E6%9D%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">谷歌账号申诉模板</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2/" rel="tag">极客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86/" rel="tag">知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 10px;">技巧</a> <a href="/tags/%E6%9E%81%E5%AE%A2/" style="font-size: 20px;">极客</a> <a href="/tags/%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">知识</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 20px;">股票</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/08/">August 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/07/">July 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/01/">January 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/08/02/Git%E4%B8%8EGithub/">Git与Github</a>
+          </li>
+        
+          <li>
+            <a href="/2026/07/24/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%89%E6%A8%A1%E6%9D%BF/">谷歌账号申诉模板</a>
+          </li>
+        
+          <li>
+            <a href="/2026/07/22/%E5%A6%82%E4%BD%95%E5%AF%BB%E6%89%BE%E8%B5%84%E6%BA%90%E4%B9%A6%E5%BD%B1%E9%9F%B3/">如何寻找资源书影音</a>
+          </li>
+        
+          <li>
+            <a href="/2026/07/22/%E8%82%A1%E6%B0%91%E7%AC%AC%E4%BA%8C%E8%AF%BE/">股民第二课</a>
+          </li>
+        
+          <li>
+            <a href="/2026/07/21/%E8%82%A1%E6%B0%91%E7%AC%AC%E4%B8%80%E8%AF%BE/">股民第一课</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 yhnz1234<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
