@@ -44,7 +44,27 @@
   
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://yhnz1234.github.io","author":{"@type":"Person","name":"yhnz1234","sameAs":[],"image":"https://yhnz1234.github.io/img/avatar.png"},"name":"yhnz1234","description":"","url":"https://yhnz1234.github.io"}</script>
-  
+  <style>
+  #blog-loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(15,17,21,.92);transition:opacity .5s ease}
+  #blog-loader.hide{opacity:0;pointer-events:none}
+  #blog-loader .spinner{width:48px;height:48px;border:4px solid rgba(255,255,255,.15);border-top-color:#1BCDFC;border-radius:50%;animation:blog-spin .8s linear infinite}
+  @keyframes blog-spin{to{transform:rotate(360deg)}}
+</style>
+<script>
+  (function(){
+    var d=document.createElement('div');d.id='blog-loader';
+    d.innerHTML='<div class="spinner"></div>';
+    document.documentElement.appendChild(d);
+    var done=false;
+    function remove(){
+      if(done)return;done=true;
+      var el=document.getElementById('blog-loader');
+      if(el){el.classList.add('hide');setTimeout(function(){el.remove()},500);}
+    }
+    if(document.readyState==='complete'){remove()}
+    else{window.addEventListener('load',remove);setTimeout(remove,5000)}
+  })();
+</script>
 </head>
 <body><div id="l_cover"></div><div class="l_body index" id="start" layout="404" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
