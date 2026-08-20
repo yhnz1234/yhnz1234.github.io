@@ -51,24 +51,29 @@
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"yhnz1234","sameAs":[],"image":"https://yhnz1234.github.io/img/avatar.png"},"dateCreated":"2026-08-12T22:51:03+08:00","dateModified":"2026-08-12T22:51:44+08:00","datePublished":"2026-08-12T22:51:03+08:00","description":"","headline":"超级搜索技术笔记","mainEntityOfPage":{"@type":"WebPage","@id":"https://yhnz1234.github.io/2026/08/12/%E8%B6%85%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"},"publisher":{"@type":"Organization","name":"yhnz1234","sameAs":[],"image":"https://yhnz1234.github.io/img/avatar.png","logo":{"@type":"ImageObject","url":"https://yhnz1234.github.io/img/avatar.png"}},"url":"https://yhnz1234.github.io/2026/08/12/%E8%B6%85%E7%BA%A7%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/","keywords":"技巧, 网络","image":[]}</script>
   <style>
-  #blog-loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(15,17,21,.92);transition:opacity .5s ease}
+  #blog-loader{position:fixed;inset:0;z-index:9999;background:radial-gradient(900px 500px at 50% 0%,#141821,#0a0c10);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .3s ease}
   #blog-loader.hide{opacity:0;pointer-events:none}
-  #blog-loader .spinner{width:48px;height:48px;border:4px solid rgba(255,255,255,.15);border-top-color:#1BCDFC;border-radius:50%;animation:blog-spin .8s linear infinite}
-  @keyframes blog-spin{to{transform:rotate(360deg)}}
+  #blog-loader .brand{position:relative;display:flex;gap:.06em;font-size:clamp(2.6rem,8vw,5rem);font-weight:800;line-height:1}
+  #blog-loader .brand span{display:inline-block;opacity:0;color:#fff;text-shadow:0 0 14px rgba(27,205,252,.9),0 0 44px rgba(27,205,252,.5);animation:blog-flicker .45s ease-out forwards}
+  #blog-loader .brand span:nth-child(1){animation-delay:.04s}
+  #blog-loader .brand span:nth-child(2){animation-delay:.09s}
+  #blog-loader .brand span:nth-child(3){animation-delay:.14s}
+  #blog-loader .brand span:nth-child(4){animation-delay:.19s}
+  #blog-loader .brand span:nth-child(5){animation-delay:.24s}
+  #blog-loader .brand span:nth-child(6){animation-delay:.29s}
+  #blog-loader .brand span:nth-child(7){animation-delay:.34s}
+  #blog-loader .brand span:nth-child(8){animation-delay:.39s}
+  #blog-loader .brand::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 32%,rgba(255,255,255,.22) 50%,transparent 68%);background-size:250% 100%;background-position:130% 0;animation:blog-shine .4s ease-out .65s forwards}
+  @keyframes blog-flicker{0%{opacity:0;transform:translateY(10px);filter:blur(4px)}45%{opacity:.5;filter:blur(0)}60%{opacity:.12}75%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}
+  @keyframes blog-shine{to{background-position:-130% 0}}
 </style>
 <script>
   (function(){
-    var d=document.createElement('div');d.id='blog-loader';
-    d.innerHTML='<div class="spinner"></div>';
-    document.documentElement.appendChild(d);
-    var done=false;
-    function remove(){
-      if(done)return;done=true;
-      var el=document.getElementById('blog-loader');
-      if(el){el.classList.add('hide');setTimeout(function(){el.remove()},500);}
-    }
-    if(document.readyState==='complete'){remove()}
-    else{window.addEventListener('load',remove);setTimeout(remove,5000)}
+    try{if(sessionStorage.getItem('blog_loader_seen')){return}sessionStorage.setItem('blog_loader_seen','1')}catch(e){}
+    var L=document.createElement('div');L.id='blog-loader';
+    L.innerHTML='<div class="brand"><span>y</span><span>h</span><span>n</span><span>z</span><span>1</span><span>2</span><span>3</span><span>4</span></div>';
+    document.documentElement.appendChild(L);
+    setTimeout(function(){L.classList.add('hide');setTimeout(function(){L.remove()},350)},950);
   })();
 </script>
 </head>
